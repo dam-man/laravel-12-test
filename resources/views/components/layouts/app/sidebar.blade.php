@@ -25,7 +25,7 @@
                 </flux:navlist.item>
 
                 <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits" target="_blank">
-                {{ __('Documentation') }}
+                Test Change
                 </flux:navlist.item>
             </flux:navlist>
 
