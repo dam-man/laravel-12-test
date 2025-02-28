@@ -25,6 +25,7 @@ return new class extends Migration
 	        $table->integer('available')->default(2000);
 	        $table->integer('sold')->default(0);
 			$table->smallInteger('published')->default(0);
+			$table->dateTime('published_at')->nullable();
 			$table->dateTime('unpublish_at')->nullable();
 	        $table->unsignedBigInteger('created_by')->nullable();
 	        $table->unsignedBigInteger('updated_by')->nullable();
