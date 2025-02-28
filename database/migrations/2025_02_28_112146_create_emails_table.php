@@ -17,10 +17,11 @@ return new class extends Migration
 	        $table->unsignedBigInteger('order_id')->nullable();
 			$table->string('message_id', 255);
 			$table->string('subject', 255);
-			$table->smallInteger('has_attachment')->default(0);
+	        $table->smallInteger('has_attachment')->default(0);
 			$table->dateTime('delivered')->nullable();
 			$table->dateTime('failed')->nullable();
 			$table->dateTime('opened')->nullable();
+			$table->dateTime('clicked')->nullable();
 			$table->dateTime('unsubscribed')->nullable();
 			$table->dateTime('complained')->nullable();
             $table->timestamps();
