@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
 			$table->string('password_reset_token', 25)->nullable();
-			$table->dateTime('last_login');
+			$table->dateTime('last_login')->nullable();
 			$table->unsignedBigInteger('campaign_id')->nullable();
 			$table->string('ip_address', 100)->nullable();
 			$table->unsignedBigInteger('created_by')->nullable();
