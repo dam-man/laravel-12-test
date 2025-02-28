@@ -37,7 +37,7 @@ return new class extends Migration
 	        $table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
         });
 
-	    Schema::create('events', function (Blueprint $table) {
+	    Schema::create('event_order', function (Blueprint $table) {
 		    $table->id();
 		    $table->unsignedBigInteger('user_id')->nullable();
 		    $table->unsignedBigInteger('order_id')->nullable();
