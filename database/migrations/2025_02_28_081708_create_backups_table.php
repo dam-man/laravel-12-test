@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
 			$table->string('filename', 255);
 			$table->integer('size')->nullable();
-			$table->boolean('present')->nullable();
-			$table->boolean('nightly')->nullable();
+			$table->smallInteger('present')->nullable();
+			$table->smallInteger('nightly')->nullable();
             $table->timestamps();
         });
     }
