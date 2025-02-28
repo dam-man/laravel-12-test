@@ -15,10 +15,19 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('role', 25)->default('guest');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+			$table->string('password_reset_token', 25)->nullable();
+			$table->dateTime('last_login');
+			$table->unsignedBigInteger('campaign_id')->nullable();
+			$table->string('ip_address', 100)->nullable();
+			$table->unsignedBigInteger('created_by')->nullable();
+			$table->unsignedBigInteger('updated_by')->nullable();
+			$table->unsignedBigInteger('deleted_by')->nullable();
             $table->timestamps();
+			$table->softDeletes();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
