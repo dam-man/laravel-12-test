@@ -25,6 +25,7 @@ return new class extends Migration
 			$table->dateTime('publish_at')->nullable();
 			$table->dateTime('unpublish_at')->nullable();
 		    $table->timestamps();
+		    $table->softDeletes();
 	    });
     }
 

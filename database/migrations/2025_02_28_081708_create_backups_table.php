@@ -18,6 +18,7 @@ return new class extends Migration
 			$table->smallInteger('present')->nullable();
 			$table->smallInteger('nightly')->nullable();
             $table->timestamps();
+			$table->softDeletes();
         });
     }
 
