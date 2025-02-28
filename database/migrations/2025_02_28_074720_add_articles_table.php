@@ -18,7 +18,7 @@ return new class extends Migration
 		    $table->string('slug')->unique();
 		    $table->text('text');
 		    $table->string('image')->nullable();
-		    $table->integer('ordering')->default(0);
+		    $table->integer('ordering')->nullable();
 		    $table->unsignedBigInteger('created_by')->nullable();
 		    $table->unsignedBigInteger('updated_by')->nullable();
 		    $table->unsignedBigInteger('deleted_by')->nullable();
