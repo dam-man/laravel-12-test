@@ -26,6 +26,10 @@ return new class extends Migration
 			$table->dateTime('unpublish_at')->nullable();
 		    $table->timestamps();
 		    $table->softDeletes();
+
+			$table->foreign('created_by')->references('id')->on('users')->onDelete('set null');
+			$table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
+			$table->foreign('deleted_by')->references('id')->on('users')->onDelete('set null');
 	    });
     }
 
